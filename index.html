@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>seniorandroid.dev — Coaching mid-level Android engineers to senior</title>
+<meta name="description" content="Coaching for mid-level Android/Kotlin developers who want to think, review, and lead like a senior engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">senior<span class="logo-accent">android</span>.dev</a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="site-nav">
+      <a href="#gap">The gap</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#about">About</a>
+      <a href="#start" class="nav-cta">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Android &amp; Kotlin coaching</p>
+        <h1>Writing code that works isn't the job.<br>Reviewing it like it matters is.</h1>
+        <p class="hero-sub">I'm Géza — a lead Android engineer in Zürich. I coach mid-level developers through the exact judgment calls that get you promoted: architecture trade-offs, review comments, and technical ownership. No tutorials, no toy apps.</p>
+        <div class="hero-actions">
+          <a href="#curriculum" class="btn btn-primary">See what we cover</a>
+          <a href="#start" class="btn btn-ghost">Book a free intro call</a>
+        </div>
+      </div>
+
+      <div class="review-panel" aria-label="Example code review">
+        <div class="review-panel-head">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="review-panel-title">UserProfileViewModel.kt — review</span>
+        </div>
+        <pre class="code-block"><code><span class="code-line code-removed">- fun loadProfile(id: String) {</span>
+<span class="code-line code-removed">-     viewModelScope.launch(Dispatchers.Main) {</span>
+<span class="code-line code-removed">-         val user = repo.fetch(id)</span>
+<span class="code-line code-removed">-         _state.value = Loaded(user)</span>
+<span class="code-line code-removed">-     }</span>
+<span class="code-line code-removed">- }</span>
+<span class="code-line code-added">+ fun loadProfile(id: String) {</span>
+<span class="code-line code-added">+     viewModelScope.launch {</span>
+<span class="code-line code-added">+         val user = repo.fetch(id)</span>
+<span class="code-line code-added">+         _state.update { Loaded(user) }</span>
+<span class="code-line code-added">+     }</span>
+<span class="code-line code-added">+ }</span></code></pre>
+        <div class="review-comment">
+          <span class="comment-avatar">GA</span>
+          <div class="comment-body">
+            <p class="comment-meta">Géza · requested changes</p>
+            <p>Works fine today. But it pins the coroutine to <code>Main</code>, which means this can't be unit tested without a dispatcher rule, and it'll silently break the moment <code>repo.fetch</code> needs a background thread. Let the scope's default dispatcher do its job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gap" class="gap">
+    <div class="section-inner">
+      <p class="eyebrow">The actual gap</p>
+      <h2>Three things nobody puts in a job description</h2>
+      <div class="gap-grid">
+        <article class="gap-card">
+          <span class="gap-mark">Ownership</span>
+          <h3>Outcomes, not tickets</h3>
+          <p>A mid-level dev closes the ticket. A senior dev asks whether the ticket was the right one, and owns what happens after it ships.</p>
+        </article>
+        <article class="gap-card">
+          <span class="gap-mark">Trade-offs</span>
+          <h3>Principles, not rules</h3>
+          <p>SOLID, clean architecture, DI — they're tools with costs, not commandments. Seniors know which ones to break, and can defend why.</p>
+        </article>
+        <article class="gap-card">
+          <span class="gap-mark">Judgment</span>
+          <h3>Comfort with ambiguity</h3>
+          <p>The spec is incomplete on purpose. Senior engineers fill the gaps with reasoning instead of waiting for someone to hand them certainty.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="curriculum" class="curriculum">
+    <div class="section-inner">
+      <p class="eyebrow">What we cover</p>
+      <h2>Six sessions. Real code, real reviews.</h2>
+      <ol class="commit-log">
+        <li class="commit">
+          <span class="commit-hash">01</span>
+          <div>
+            <h3>Architecture that survives product changes</h3>
+            <p>MVVM/MVI trade-offs, module boundaries, and where abstraction earns its cost — and where it doesn't.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="commit-hash">02</span>
+          <div>
+            <h3>Coroutines &amp; structured concurrency, beyond the tutorial</h3>
+            <p>Scopes, cancellation, and the failure modes that only show up in production traffic.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="commit-hash">03</span>
+          <div>
+            <h3>Testing strategy: what to test, what to skip</h3>
+            <p>Coverage numbers are a vanity metric. Building the judgment to know what actually needs a test.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="commit-hash">04</span>
+          <div>
+            <h3>Code review as a teaching tool</h3>
+            <p>Writing review comments that change how someone thinks, not just what they type.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="commit-hash">05</span>
+          <div>
+            <h3>Technical leadership without a title change</h3>
+            <p>Influencing architecture decisions and mentoring peers before anyone calls you "senior."</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="commit-hash">06</span>
+          <div>
+            <h3>Your promotion case, written like a design doc</h3>
+            <p>Turning six sessions of work into evidence your manager can actually act on.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="section-inner about-inner">
+      <div class="about-avatar" aria-hidden="true">GA</div>
+      <div>
+        <p class="eyebrow">Who's teaching this</p>
+        <h2>Géza</h2>
+        <p>Lead Android engineer based in Zürich, Switzerland. I've spent years reviewing pull requests, untangling architecture decisions made under deadline pressure, and mentoring engineers through the exact transition this course covers. This isn't theory — it's the feedback I've given for real, in real code reviews, distilled into six sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="cta">
+    <div class="section-inner cta-inner">
+      <p class="eyebrow">Next cohort</p>
+      <h2>Request a review of your own trajectory</h2>
+      <p class="cta-sub">A free 20-minute call — no pitch, just an honest read on where you are and what's actually missing.</p>
+      <form class="cta-form" action="#" method="post">
+        <label for="email" class="visually-hidden">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        <button type="submit" class="btn btn-primary">Request review</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>senior<span class="logo-accent">android</span>.dev</span>
+    <span>Géza · Zürich, Switzerland</span>
+  </div>
+</footer>
+
+</body>
+</html>
