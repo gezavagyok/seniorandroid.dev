@@ -16,7 +16,6 @@
 <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-
 <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
 
 <header class="site-header">
@@ -48,29 +47,38 @@
       </div>
 
       <div class="review-panel" aria-label="Example code review">
-        <div class="review-panel-head">
-          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
-          <span class="review-panel-title">UserProfileViewModel.kt — review</span>
-        </div>
-        <pre class="code-block"><code><span class="code-line code-removed">- fun loadProfile(id: String) {</span>
-<span class="code-line code-removed">-     viewModelScope.launch(Dispatchers.Main) {</span>
-<span class="code-line code-removed">-         val user = repo.fetch(id)</span>
-<span class="code-line code-removed">-         _state.value = Loaded(user)</span>
-<span class="code-line code-removed">-     }</span>
-<span class="code-line code-removed">- }</span>
-<span class="code-line code-added">+ fun loadProfile(id: String) {</span>
-<span class="code-line code-added">+     viewModelScope.launch {</span>
-<span class="code-line code-added">+         val user = repo.fetch(id)</span>
-<span class="code-line code-added">+         _state.update { Loaded(user) }</span>
-<span class="code-line code-added">+     }</span>
-<span class="code-line code-added">+ }</span></code></pre>
-        <div class="review-comment">
-          <span class="comment-avatar">GA</span>
-          <div class="comment-body">
-            <p class="comment-meta">Géza · requested changes</p>
-            <p>Works fine today. But it pins the coroutine to <code>Main</code>, which means this can't be unit tested without a dispatcher rule, and it'll silently break the moment <code>repo.fetch</code> needs a background thread. Let the scope's default dispatcher do its job.</p>
-          </div>
-        </div>
+	      <section class="skill-level">
+  <h2 class="skill-level__title">Skill Level</h2>
+
+  <div class="skill-bar">
+    <h3 class="skill-bar__label">Kotlin</h3>
+    <div class="skill-bar__track">
+	    <div class="skill-bar__fill" style="width: 75%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-bar">
+    <h3 class="skill-bar__label">Android platform</h3>
+    <div class="skill-bar__track">
+	    <div class="skill-bar__fill" style="width: 85%;"></div>
+    </div>
+  </div>
+
+
+  <div class="skill-bar">
+    <h3 class="skill-bar__label">Coroutines</h3>
+    <div class="skill-bar__track">
+	    <div class="skill-bar__fill" style="width: 16%;"></div>
+    </div>
+  </div>
+  <div class="skill-bar">
+    <h3 class="skill-bar__label">Architecture</h3>
+    <div class="skill-bar__track">
+	    <div class="skill-bar__fill" style="width: 35%;"></div>
+    </div>
+  </div>
+
+</section>
       </div>
     </div>
   </section>
@@ -161,3 +169,4 @@
 
 </body>
 </html>
+<script src="/assets/js/skill-bars.js"></script>
