@@ -1,165 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>seniorandroid.dev — Coaching mid-level Android engineers to senior</title>
-		<meta name="description" content="Coaching for mid-level Android/Kotlin developers who want to think, review, and lead like a senior engineer.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-	</head>
-	<body>
-		<input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      seniorandroid.dev — Coaching mid-level Android engineers to senior
+    </title>
+    <meta
+      name="description"
+      content="Coaching for mid-level Android/Kotlin developers who want to think, review, and lead like a senior engineer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
 
-		<header class="site-header">
-			<div class="header-inner">
-				<a href="#top" class="logo">senior<span class="logo-accent">android</span>.dev</a>
-				<label for="nav-toggle" class="nav-burger" aria-label="Open menu">
-					<span></span><span></span><span></span>
-				</label>
-				<nav class="site-nav">
-					<a href="#curriculum">Curriculum</a>
-					<a href="#about">About</a>
-					<a href="#start" class="nav-cta">Book a call</a>
-				</nav>
-			</div>
-		</header>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="logo"
+          >senior<span class="logo-accent">android</span>.dev</a
+        >
+        <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="#curriculum">Curriculum</a>
+          <a href="#about">About</a>
+          <a href="#start" class="nav-cta">Book a call</a>
+        </nav>
+      </div>
+    </header>
 
-		<main id="top">
+    <main id="top">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Android &amp; Kotlin coaching</p>
+            <h1>
+              Juniors Write code that works<br />Senior developers have a
+              different mindset
+            </h1>
+            <p class="hero-sub">
+              I'm Géza. I coach junior and mid-level developers to become world
+              class professionals. I have 10+ years in Software development,
+              used to work as a tech lead @ Capgemini, now I want to train the
+              next generation of senior devs.
+            </p>
+            <div class="hero-actions">
+              <a href="#curriculum" class="btn btn-primary"
+                >See what we cover</a
+              >
+              <a href="#start" class="btn btn-ghost">Book spot</a>
+            </div>
+          </div>
 
-			<section class="hero">
-				<div class="hero-inner">
-					<div class="hero-copy">
-						<p class="eyebrow">Android &amp; Kotlin coaching</p>
-						<h1>Juniors Write code that works<br>Senior developers have a different mindset</h1>
-						<p class="hero-sub">I'm Géza. I coach junior and mid-level developers to become world class professionals. I have 10+ years in Software development, used to work as a tech lead @ Capgemini, now I want to train the next generation of senior devs.</p>
-						<div class="hero-actions">
-							<a href="#curriculum" class="btn btn-primary">See what we cover</a>
-							<a href="#start" class="btn btn-ghost">Book spot</a>
-						</div>
-					</div>
+          <div class="review-panel" aria-label="Example code review">
+            <section class="skill-level">
+              <h2 class="skill-level__title">Skill Levels</h2>
 
-					<div class="review-panel" aria-label="Example code review">
-						<section class="skill-level">
-							<h2 class="skill-level__title">Skill Levels</h2>
+              <div class="skill-bar">
+                <h3 class="skill-bar__label">Kotlin</h3>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" style="width: 75%"></div>
+                </div>
+              </div>
 
-							<div class="skill-bar">
-								<h3 class="skill-bar__label">Kotlin</h3>
-								<div class="skill-bar__track">
-									<div class="skill-bar__fill" style="width: 75%;"></div>
-								</div>
-							</div>
+              <div class="skill-bar">
+                <h3 class="skill-bar__label">Android platform</h3>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" style="width: 85%"></div>
+                </div>
+              </div>
 
-							<div class="skill-bar">
-								<h3 class="skill-bar__label">Android platform</h3>
-								<div class="skill-bar__track">
-									<div class="skill-bar__fill" style="width: 85%;"></div>
-								</div>
-							</div>
+              <div class="skill-bar">
+                <h3 class="skill-bar__label">Coroutines</h3>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" style="width: 16%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <h3 class="skill-bar__label">Architecture</h3>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" style="width: 35%"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
 
+      <section id="curriculum" class="curriculum">
+        <div class="section-inner">
+          <p class="eyebrow">What we cover</p>
+          <h2>
+            10 sessions, to get your most important skills right. You will have
+            homework to reinforce the learnings, and recommended readings for
+            each session. Learn the best practices to become a senior dev as
+            soon as possible!
+          </h2>
+          <ol class="commit-log">
+            <li class="commit">
+              <span class="commit-hash">01</span>
+              <div>
+                <h3>Architectures</h3>
+                <p>
+                  What's the difference between MVC, MVP, MVVM, MVI? What's a
+                  good architecture for the project?
+                </p>
+              </div>
+            </li>
+            <li class="commit">
+              <span class="commit-hash">02</span>
+              <div>
+                <h3>
+                  Coroutines &amp; structured concurrency, beyond the tutorial
+                </h3>
+                <p>
+                  Scopes, cancellation, and the failure modes that only show up
+                  in production traffic.
+                </p>
+              </div>
+            </li>
+            <li class="commit">
+              <span class="commit-hash">03</span>
+              <div>
+                <h3>
+                  Testing strategy: what to test, how do pros write their tests?
+                </h3>
+                <p>
+                  Coverage numbers are a vanity metric. Building the judgment to
+                  know what actually needs a test. Are you sure, your tests are
+                  resuable?
+                </p>
+              </div>
+            </li>
+            <li class="commit">
+              <span class="commit-hash">04</span>
+              <div>
+                <h3>Using AI as a tool</h3>
+                <p>
+                  The narrative has shifted from 'people will be replaced by AI'
+                  to 'people will be 1000x times more productive by AI'. Is this
+                  really the case? We'll dive deep into this.
+                </p>
+              </div>
+            </li>
+            <li class="commit">
+              <span class="commit-hash">05</span>
+              <div>
+                <h3>Communicating in a professional way</h3>
+                <p>
+                  Influencing architecture decisions and software development
+                  before anyone calls you "senior."
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-							<div class="skill-bar">
-								<h3 class="skill-bar__label">Coroutines</h3>
-								<div class="skill-bar__track">
-									<div class="skill-bar__fill" style="width: 16%;"></div>
-								</div>
-							</div>
-							<div class="skill-bar">
-								<h3 class="skill-bar__label">Architecture</h3>
-								<div class="skill-bar__track">
-									<div class="skill-bar__fill" style="width: 35%;"></div>
-								</div>
-							</div>
+      <section id="about" class="about">
+        <div class="section-inner about-inner">
+          <div class="about-avatar" aria-hidden="true">GA</div>
+          <div>
+            <p class="eyebrow">Who's teaching this</p>
+            <h2>Géza</h2>
+            <p>
+              Used to work as a Lead Android engineer @ Capgemini, nowadays I'm
+              working with Rust and embedded systems. I've spent years reviewing
+              pull requests, untangling architecture decisions made under
+              deadline pressure, and mentoring engineers through the exact
+              transition this course covers.
+            </p>
+          </div>
+        </div>
+      </section>
 
-						</section>
-					</div>
-				</div>
-			</section>
+      <section id="start" class="cta">
+        <div class="section-inner cta-inner">
+          <p class="eyebrow">Next cohort</p>
+          <h2>Request a review of your own trajectory</h2>
+          <p class="cta-sub">A free call to get known each other</p>
+          <form class="cta-form" action="#" method="post">
+            <label for="email" class="visually-hidden">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@company.com"
+              required
+            />
+            <button type="submit" class="btn btn-primary">
+              Request review
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
 
-			<section id="curriculum" class="curriculum">
-				<div class="section-inner">
-					<p class="eyebrow">What we cover</p>
-					<h2>10 sessions, to get your most important skills right. You will have homework to reinforce the learnings, and recommended readings for each session. Learn the best practices to become a senior dev as soon as possible!</h2>
-					<ol class="commit-log">
-						<li class="commit">
-							<span class="commit-hash">01</span>
-							<div>
-								<h3>Architectures</h3>
-								<p>What's the difference between MVC, MVP, MVVM, MVI? What's a good architecture for the project?</p>
-							</div>
-						</li>
-						<li class="commit">
-							<span class="commit-hash">02</span>
-							<div>
-								<h3>Coroutines &amp; structured concurrency, beyond the tutorial</h3>
-								<p>Scopes, cancellation, and the failure modes that only show up in production traffic.</p>
-							</div>
-						</li>
-						<li class="commit">
-							<span class="commit-hash">03</span>
-							<div>
-								<h3>Testing strategy: what to test, how do pros write their tests?</h3>
-								<p>Coverage numbers are a vanity metric. Building the judgment to know what actually needs a test. Are you sure, your tests are resuable?</p>
-							</div>
-						</li>
-						<li class="commit">
-							<span class="commit-hash">04</span>
-							<div>
-								<h3>Using AI as a tool</h3>
-								<p>The narrative has shifted from 'people will be replaced by AI' to 'people will be 1000x times more productive by AI'. Is this really the case? We'll dive deep into this.</p>
-							</div>
-						</li>
-						<li class="commit">
-							<span class="commit-hash">05</span>
-							<div>
-								<h3>Communicating in a professional way</h3>
-								<p>Influencing architecture decisions and software development  before anyone calls you "senior."</p>
-							</div>
-						</li>
-					</ol>
-				</div>
-			</section>
-
-			<section id="about" class="about">
-				<div class="section-inner about-inner">
-					<div class="about-avatar" aria-hidden="true">GA</div>
-					<div>
-						<p class="eyebrow">Who's teaching this</p>
-						<h2>Géza</h2>
-						<p>Used to work as a Lead Android engineer @ Capgemini, nowadays I'm working with Rust and embedded systems. I've spent years reviewing pull requests, untangling architecture decisions made under deadline pressure, and mentoring engineers through the exact transition this course covers.</p>
-					</div>
-				</div>
-			</section>
-
-			<section id="start" class="cta">
-				<div class="section-inner cta-inner">
-					<p class="eyebrow">Next cohort</p>
-					<h2>Request a review of your own trajectory</h2>
-					<p class="cta-sub">A free call to get known each other</p>
-					<form class="cta-form" action="#" method="post">
-						<label for="email" class="visually-hidden">Email address</label>
-						<input type="email" id="email" name="email" placeholder="you@company.com" required>
-						<button type="submit" class="btn btn-primary">Request review</button>
-					</form>
-				</div>
-			</section>
-
-		</main>
-
-		<footer class="site-footer">
-			<div class="section-inner footer-inner">
-				<span>senior<span class="logo-accent">android</span>.dev</span>
-				<span>Géza · Zürich, Switzerland 🇨🇭</span>
-			</div>
-		</footer>
-
-	</body>
+    <footer class="site-footer">
+      <div class="section-inner footer-inner">
+        <span>senior<span class="logo-accent">android</span>.dev</span>
+        <span>Géza · Zürich, Switzerland 🇨🇭</span>
+      </div>
+    </footer>
+  </body>
 </html>
 <script src="/assets/js/skill-bars.js"></script>
