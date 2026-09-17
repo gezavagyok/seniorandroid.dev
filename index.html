@@ -37,7 +37,7 @@
         <nav class="site-nav">
           <a href="#curriculum">Curriculum</a>
           <a href="#about">About</a>
-          <a href="#start" class="nav-cta">Book a call</a>
+          <a href="#start" class="nav-cta">Apply now</a>
         </nav>
       </div>
     </header>
@@ -61,7 +61,7 @@
               <a href="#curriculum" class="btn btn-primary"
                 >See what we cover</a
               >
-              <a href="#start" class="btn btn-ghost">Book a spot</a>
+              <a href="#start" class="btn btn-ghost">Apply now</a>
             </div>
           </div>
 
@@ -182,14 +182,21 @@
 
       <section id="start" class="cta">
         <div class="section-inner cta-inner">
-          <h2>Next course</h2>
-          <p class="cta-sub">
-            starts in January, 2027. Application deadline: 31th
-            December, 2026. 
-          </p>
-          <button class="btn btn-primary">
-            <a href="mailto:info@seniorandroid.dev">Send email</a>
-          </button>
+          <h2>Next course starts: January, 2027</h2>
+          <div class="cta-sub">
+            <ul>
+              <li>Ideal group size: 3–4 participants, 90 min / class</li>
+              <li>
+                Classes are online (unless you're based in 🇨🇭 too), exact time
+                is flexible, ideally after work
+              </li>
+              <li>Homework is due 1 day before class</li>
+              <li>Required reading: under 10 pages / week</li>
+              <li>10 weeks total, 1 class / week</li>
+            </ul>
+          </div>
+          <p class="eyebrow">Interested? Have questions?</p>
+          <button id="contact" class="btn btn-primary">Send a message</button>
         </div>
       </section>
     </main>
@@ -197,8 +204,17 @@
     <footer class="site-footer">
       <div class="section-inner footer-inner">
         <span>senior<span class="logo-accent">android</span>.dev</span>
-        <span>Géza · Zürich, Switzerland 🇨🇭</span>
+        <span>Service from Zürich, Switzerland 🇨🇭</span>
       </div>
     </footer>
   </body>
 </html>
+<script>
+  document.getElementById("contact").addEventListener("click", function () {
+    const subject = encodeURIComponent("Senior Android course");
+    const body = encodeURIComponent(
+      "Hi Géza,\n\nI'm interested in your course, let's discuss the details on DD.MM.YYYY!",
+    );
+    window.location.href = `mailto:info@seniorandroid.dev?subject=${subject}&body=${body}`;
+  });
+</script>
