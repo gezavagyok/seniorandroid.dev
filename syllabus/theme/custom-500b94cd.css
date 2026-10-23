@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/InterVariable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --brand-bg: #17131F;
+  --brand-surface: #211C2C;
+  --brand-surface-alt: #14111C;
+  --brand-border: #322B41;
+  --brand-text: #F2EEE7;
+  --brand-text-muted: #A79FC0;
+  --brand-accent: #F0A83A;
+  --brand-accent-soft: #F0A83A22;
+  --brand-added: #6FCF97;
+  --brand-removed: #E8788A;
+
+  --font-display: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --content-max-width: 820px;
+}
+
+.coal {
+  --bg: var(--brand-bg);
+  --fg: var(--brand-text);
+
+  --sidebar-bg: var(--brand-surface-alt);
+  --sidebar-fg: var(--brand-text-muted);
+  --sidebar-non-existant: var(--brand-border);
+  --sidebar-non-existent: var(--brand-border);
+  --sidebar-active: var(--brand-accent);
+  --sidebar-spacer: var(--brand-border);
+
+  --scrollbar: var(--brand-border);
+
+  --icons: var(--brand-text-muted);
+  --icons-hover: var(--brand-accent);
+
+  --links: var(--brand-accent);
+
+  --inline-code-color: var(--brand-accent);
+
+  --theme-popup-bg: var(--brand-surface);
+  --theme-popup-border: var(--brand-border);
+  --theme-hover: var(--brand-border);
+
+  --quote-bg: var(--brand-surface);
+  --quote-border: var(--brand-border);
+
+  --warning-border: var(--brand-accent);
+
+  --table-border-color: var(--brand-border);
+  --table-header-bg: var(--brand-surface);
+  --table-alternate-bg: var(--brand-surface-alt);
+
+  --searchbar-border-color: var(--brand-border);
+  --searchbar-bg: var(--brand-surface);
+  --searchbar-fg: var(--brand-text);
+  --searchbar-shadow-color: #00000066;
+  --searchresults-header-fg: var(--brand-text-muted);
+  --searchresults-border-color: var(--brand-border);
+  --searchresults-li-bg: var(--brand-surface);
+  --search-mark-bg: var(--brand-accent-soft);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.menu-title {
+  font-family: var(--font-display);
+}
+
+code, pre, .hljs {
+  font-family: var(--font-display);
+}
+
+.coal pre > code,
+.coal .hljs {
+  background: var(--brand-surface);
+  color: var(--brand-text);
+}
+
+.coal pre {
+  border: 1px solid var(--brand-border);
+  border-radius: 6px;
+}
+
+.coal .hljs-addition {
+  color: var(--brand-added);
+  background: transparent;
+}
+
+.coal .hljs-deletion {
+  color: var(--brand-removed);
+  background: transparent;
+}
+
+.coal .hljs-comment,
+.coal .hljs-quote {
+  color: var(--brand-text-muted);
+  font-style: italic;
+}
+
+.coal .hljs-keyword,
+.coal .hljs-selector-tag,
+.coal .hljs-built_in {
+  color: var(--brand-accent);
+}
+
+.coal .hljs-string,
+.coal .hljs-attr,
+.coal .hljs-symbol {
+  color: var(--brand-added);
+}
+
+.coal .hljs-number,
+.coal .hljs-literal,
+.coal .hljs-meta {
+  color: var(--brand-removed);
+}
+
+.coal .hljs-title,
+.coal .hljs-type,
+.coal .hljs-class .hljs-title {
+  color: var(--brand-text);
+  font-weight: 600;
+}
+
+#theme-toggle,
+#theme-list {
+  display: none !important;
+}
